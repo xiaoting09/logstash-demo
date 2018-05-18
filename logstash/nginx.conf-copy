@@ -1,0 +1,25 @@
+input {
+	http_poller {
+		urls => {	
+ 
+ 		   0 => {
+			method => get
+			url => "http://10.5.110.170:80/nginx_status/format/json"
+			header => {
+			    Accept => "application/json"
+			}
+		   }
+		}
+		request_timeout => 60
+		interval => 60
+		codec => "json"
+	}
+}
+output{
+    stdout{
+       codec => rubydebug
+    }
+    elasticsearch {
+       hosts => ["127.0.0.1"]
+    }
+}

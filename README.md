@@ -1,2 +1,2 @@
 # logstash-demo
-ELK权威指南的logstash的列子编写
+ELK权威指南的logstash的demo编写
