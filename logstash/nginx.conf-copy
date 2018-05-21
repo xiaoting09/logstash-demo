@@ -4,7 +4,7 @@ input {
  
  		   0 => {
 			method => get
-			url => "http://10.5.110.170:80/nginx_status/format/json"
+			url => "http://127.0.0.1:80/nginx_status/format/json"
 			header => {
 			    Accept => "application/json"
 			}
